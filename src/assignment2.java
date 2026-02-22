@@ -34,7 +34,7 @@ public class assignment2 {
     static boolean isPalindrome(Node head) 
     {
         left = head; 
-        return check(head);
+        return check(head); //recursive check starting from head
     }
 
     // Helper method to build a linked list from an array of values
