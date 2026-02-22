@@ -1,8 +1,9 @@
 public class assignment1 {
+    //Node class 
     static class Node 
     {
-        int key;
-        Node next;
+        int key; 
+        Node next; 
 
         Node (int key) 
         {
@@ -25,34 +26,35 @@ public class assignment1 {
         Node current = head;
         while (current != null) 
         {
-            if (current.key == key) 
+            if (current.key == key) //node matches the search key
             {
                 return current;
             }
-            current = current.next;
+            current = current.next; //move to the next node
         }
         return null; // Key not found
     }
 
+    // Deletes the node x from the list starting from head and returns the new head of the list.
     static Node listDelete(Node head, Node x) 
     {
-        if (head == null) 
+        if (head == null)
         {
             return null; // List is empty
         }
-        if (head == x) 
+        if (head == x) // If the node to delete is the head of the list
         {
-            return head.next; // Deleted head node
+            return head.next; // Deleted head node and return new head
         }
-        Node current = head;
-        while (current.next != null) 
+        Node current = head; // Start from the head and look for the node to delete
+        while (current.next != null)  // Traverse the list until the end
         {
-            if (current.next == x) 
+            if (current.next == x) //node to delete
             {
                 current.next = current.next.next; // Bypass the node to be deleted
                 return head; // Return the unchanged head of the list
             }
-            current = current.next;
+            current = current.next; //move to next node
         }
         return head; // Node to delete not found, return unchanged head
     }
@@ -85,7 +87,8 @@ Print the list again to show the change
         // Print the list
         System.out.println("List after insertion:");
         Node current = head;
-        while (current != null) {
+        while (current != null) 
+        {
             System.out.print(current.key + " ");
             current = current.next;
         }
@@ -93,9 +96,12 @@ Print the list again to show the change
         // Search for a node
         int searchKey = 20;
         Node foundNode = listSearch(head, searchKey);
-        if (foundNode != null) {
+        if (foundNode != null) 
+        {
             System.out.println("Node with key " + searchKey + " found.");
-        } else {
+        } 
+        else 
+        {
             System.out.println("Node with key " + searchKey + " not found.");
         }
     }

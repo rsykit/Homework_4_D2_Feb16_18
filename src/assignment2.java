@@ -1,5 +1,5 @@
 public class assignment2 {
-
+    //Node class
     static class Node 
     {
         int key;
@@ -74,7 +74,8 @@ public class assignment2 {
             {5, 10, 17}
         };
 
-        for (int[] tc : testCases) {
+        for (int[] tc : testCases) 
+        {
             Node list = buildList(tc);
             System.out.print("List: ");
             printList(list);
