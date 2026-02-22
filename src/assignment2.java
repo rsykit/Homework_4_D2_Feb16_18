@@ -1,10 +1,12 @@
 public class assignment2 {
 
-    static class Node {
+    static class Node 
+    {
         int key;
         Node next;
 
-        Node(int key) {
+        Node(int key) 
+        {
             this.key = key;
             this.next = null;
         }
@@ -14,7 +16,8 @@ public class assignment2 {
     static Node left;
 
     // Recurse to the end; on the way back, compare left (front) vs current (back)
-    static boolean check(Node right) {
+    static boolean check(Node right) 
+    {
         // Base case: past the end — start unwinding
         if (right == null) return true;
 
@@ -38,7 +41,8 @@ public class assignment2 {
     }
 
     // Helper method to build a linked list from an array of values
-    static Node buildList(int[] values) {
+    static Node buildList(int[] values) 
+    {
         Node head = null; //empty list
         for (int i = values.length - 1; i >= 0; i--) // Insert at head to maintain order
         {
@@ -57,7 +61,7 @@ public class assignment2 {
         { 
             System.out.print(current.key); // Print the current node's key
             if (current.next != null) System.out.print(" -> "); // Print arrow if not the last node
-            current = current.next;
+            current = current.next; //next node
         }
         System.out.println();
     }
